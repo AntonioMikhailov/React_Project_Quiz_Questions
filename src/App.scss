@@ -1,0 +1,121 @@
+* {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  box-sizing: border-box;  
+}
+body {
+  background-color: rgb(233, 233, 233);
+  font-family: sans-serif, Arial;
+}
+.container {
+  max-width: 1200px;
+  padding: 0px 20px 20px 20px;
+  margin: 0 auto;
+  margin-top: 50px;
+ }
+ .header-title {
+  padding: 10px 0px 5px 0px;
+  text-align: center;
+  background-color: #fff;
+  border-bottom: 1px solid rgb(193, 193, 193);
+ }
+/// Форма
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+ justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px 10px 20px;
+  gap: 10px;
+  z-index: 20;
+  border-bottom: 1px solid rgb(166, 166, 166);
+}
+label {
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2d909d;
+}
+input[data-questions] {
+  width: 50px;
+}
+.btn {
+background-color: rgb(90, 198, 212);
+color: rgb(255, 255, 255);
+border:  none;
+border-radius:5px;
+cursor: pointer;
+padding: 5px 10px 5px 10px;
+transition: all 0.3s ease .0s;
+}
+.btn:hover {
+background-color: rgb(45, 144, 157);
+}
+ // Список
+.card-grid {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+position: relative;
+border-radius:5px;
+box-shadow: 0 0 5px 2px rgb(184, 184, 184);
+background-color: #fff;
+height: 250px;
+transform-style: preserve-3d; 
+// perspective немного добавляет 3D
+transform: perspective(1000px) rotateY(0deg);
+transition: all 0.3s ease .0s;
+cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 0 5px 2px rgb(112, 112, 112);
+}
+hr {
+  margin: 10px 0px 0px 0px;
+ }
+.card.flip {
+  transform: perspective(1000px) rotateY(180deg);
+}
+ .front ,  .back {
+  position: absolute;
+  padding: 15px;
+  border-radius:5px;
+  font-size: 18px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%; // важно для FireFox + если надо другой фон на back 
+  width: 100%; // важно для FireFox + если надо другой фон на back 
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+.back {
+  // фон для back
+   background-color: rgb(90, 198, 212);
+  transform: rotateY(180deg);
+  color: rgb(255, 255, 255);
+}
+ul {
+ padding-inline-start: 20px;  
+  }
+.flashcard-options {
+ display: flex;
+ align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 14px;
+ }
+li   {
+ margin: 5px 0px 0px 0px;
+ text-indent: -5px;
+ text-align: left;
+color:   #2d909d;
+}
